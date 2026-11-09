@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Emotion Detection Application</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><h1>Emotion Detection Application</h1></header>
+  <main>
+    <h2>Enter a statement to analyze its emotion</h2>
+    <label for="textToAnalyze">Your statement</label>
+    <textarea id="textToAnalyze" rows="3" placeholder="Type a statement here"></textarea>
+    <button type="button" id="analyze">Run Sentiment Analysis</button>
+    <section id="resultSection" hidden aria-live="polite">
+      <h2>Result</h2>
+      <p id="result"></p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+</body>
+</html>
